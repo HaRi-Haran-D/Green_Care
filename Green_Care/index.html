@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenCare - Professional Gardening & Pest Control Solutions</title>
+    <meta name="description" content="Expert gardening tips and eco-friendly pest control solutions for your home and garden.">
+    <link rel="icon" href="assets/img/flower.png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <style>
+        :root {
+            --primary-green: #2d5a27;
+            --secondary-green: #4a7c59;
+            --accent-color: #8bc34a;
+            --earth-brown: #8d6e63;
+            --light-green: #f1f8e9;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-green) !important;
+        }
+        
+        .hero-carousel {
+            height: 600px;
+        }
+        
+        .hero-carousel .carousel-item {
+            height: 600px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(45, 90, 39, 0.8), rgba(74, 124, 89, 0.6));
+        }
+
+        
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: #000;
+            font-weight: 600;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-green);
+            border-color: var(--primary-green);
+            color: white;
+        }
+        
+        .btn-outline-light:hover {
+            background-color: white;
+            color: var(--primary-green);
+        }
+        
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            height: 100%;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(45, 90, 39, 0.15);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+        }
+        
+        .product-card {
+            transition: transform 0.3s ease;
+            border: none;
+            overflow: hidden;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .product-image {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover .product-image {
+            transform: scale(1.1);
+        }
+        
+        .testimonial-item {
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .testimonial-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+        }
+        
+        .newsletter-section {
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+        }
+        
+        .footer {
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--primary-green);
+            color: white;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <div class="p-2">
+                    <img src="assets/img/flower.png" alt="" width="30" height="30   ">
+                </div>
+                GreenCare
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">   
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex gap-2">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-success btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person me-1"></i>Login
+                        </button>
+
+                        <div class="dropdown-menu">
+                            <form class="px-4 py-3">
+                            <div class="mb-3">
+                                <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                                    <label class="form-check-label" for="dropdownCheck">Remember me</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Sign in</button>
+                            </form>
+                            <a class="dropdown-item" href="register.html">Don't have an account? <span class="text-primary">Register</span></a>
+                            <a class="dropdown-item text-primary" href="#">Forgot password?</a>
+                        </div>
+                    </div>
+
+                    <a class="btn btn-primary btn-sm" href="register.html">Register</a>
+                    <button class="btn btn-outline-success btn-sm">
+                        <i class="bi bi-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel -->
+    <section id="home">
+        <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: url('assets/img/vegitable.avif');">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 mx-auto">
+                                    <div class="mb-4">
+                                        <i class="bi bi-flower1 fs-1"></i>
+                                    </div>
+                                    <h6 class="text-uppercase mb-3 text-white-50">Expert Gardening Solutions</h6>
+                                    <h2 class="display-3 fw-bold mb-4">Transform Your Garden</h2>
+                                    <p class="lead mb-5">Discover professional gardening tips and premium tools to create your dream garden space.</p>
+                                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                                        <button class="btn btn-primary btn-lg">Explore Garden Tips</button>
+                                        <button class="btn btn-outline-light btn-lg">Learn More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-item" style="background-image: url('assets/img/soil.avif');">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 mx-auto">
+                                    <div class="mb-4">
+                                        <i class="bi bi-shield-check fs-1"></i>
+                                    </div>
+                                    <h6 class="text-uppercase mb-3 text-white-50">Safe Pest Control</h6>
+                                    <h2 class="display-3 fw-bold mb-4">Protect Your Plants</h2>
+                                    <p class="lead mb-5">Eco-friendly pest control solutions that protect your garden while keeping your family safe.</p>
+                                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                                        <button class="btn btn-primary btn-lg">Learn About Protection</button>
+                                        <button class="btn btn-outline-light btn-lg">Learn More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-item" style="background-image: url('assets/img/plant.jpeg');">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 mx-auto">
+                                    <div class="mb-4">
+                                        <i class="bi bi-recycle fs-1"></i>
+                                    </div>
+                                    <h6 class="text-uppercase mb-3 text-white-50">Eco-Friendly Farming</h6>
+                                    <h2 class="display-3 fw-bold mb-4">Sustainable Growing</h2>
+                                    <p class="lead mb-5">Embrace sustainable practices with our organic products and environmentally conscious methods.</p>
+                                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                                        <button class="btn btn-primary btn-lg">Go Eco-Friendly</button>
+                                        <button class="btn btn-outline-light btn-lg">Learn More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="about" class="py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-4 fw-bold mb-4">Why Choose GreenCare?</h2>
+                    <p class="lead text-muted">We provide comprehensive gardening and pest control solutions with a focus on sustainability and effectiveness.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card feature-card h-100 text-center p-4">
+                        <div class="feature-icon bg-light text-success">
+                            <i class="bi bi-flower1"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Gardening Tips</h5>
+                        <p class="text-muted mb-4">Expert advice and seasonal tips to help your garden thrive year-round.</p>
+                        <button class="btn btn-outline-success btn-sm mt-auto">Learn More</button>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="card feature-card h-100 text-center p-4">
+                        <div class="feature-icon bg-light text-warning">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Pest Solutions</h5>
+                        <p class="text-muted mb-4">Safe and effective pest control methods that protect your plants and family.</p>
+                        <button class="btn btn-outline-success btn-sm mt-auto">Learn More</button>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="card feature-card h-100 text-center p-4">
+                        <div class="feature-icon bg-light text-success">
+                            <i class="bi bi-recycle"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Eco Products</h5>
+                        <p class="text-muted mb-4">Sustainable, organic products that promote healthy soil and plant growth.</p>
+                        <button class="btn btn-outline-success btn-sm mt-auto">Learn More</button>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="card feature-card h-100 text-center p-4">
+                        <div class="feature-icon bg-light text-info">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Expert Support</h5>
+                        <p class="text-muted mb-4">Professional guidance from certified horticulturists and pest control specialists.</p>
+                        <button class="btn btn-outline-success btn-sm mt-auto">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-4 fw-bold mb-4">Featured Products</h2>
+                    <p class="lead text-muted">Discover our carefully curated selection of premium gardening and pest control products.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card h-100">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top product-image" alt="Organic Fertilizer">
+                            <span class="badge bg-danger position-absolute top-0 start-0 m-3">Sale</span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Organic Fertilizer</h5>
+                            <div class="mb-2">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-half text-warning"></i>
+                                <small class="text-muted ms-1">4.8 (156)</small>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="h5 text-success me-2">$24.99</span>
+                                <span class="text-muted text-decoration-line-through">$29.99</span>
+                            </div>
+                            <button class="btn btn-primary mt-auto">
+                                <i class="bi bi-cart me-1"></i>Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card h-100">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1585314062604-1a357de8b000?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top product-image" alt="Eco Pest Control Spray">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Eco Pest Control Spray</h5>
+                            <div class="mb-2">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-half text-warning"></i>
+                                <small class="text-muted ms-1">4.7 (89)</small>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="h5 text-success">$18.99</span>
+                            </div>
+                            <button class="btn btn-primary mt-auto">
+                                <i class="bi bi-cart me-1"></i>Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card h-100">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top product-image" alt="Premium Garden Seeds">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Premium Garden Seeds</h5>
+                            <div class="mb-2">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <small class="text-muted ms-1">4.9 (234)</small>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="h5 text-success">$12.99</span>
+                            </div>
+                            <button class="btn btn-primary mt-auto">
+                                <i class="bi bi-cart me-1"></i>Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card h-100">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top product-image" alt="Professional Tool Set">
+                            <span class="badge bg-danger position-absolute top-0 start-0 m-3">Sale</span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Professional Tool Set</h5>
+                            <div class="mb-2">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star text-warning"></i>
+                                <small class="text-muted ms-1">4.6 (67)</small>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="h5 text-success me-2">$89.99</span>
+                                <span class="text-muted text-decoration-line-through">$109.99</span>
+                            </div>
+                            <button class="btn btn-primary mt-auto">
+                                <i class="bi bi-cart me-1"></i>Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card h-100">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top product-image" alt="Organic Soil Mix">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Organic Soil Mix</h5>
+                            <div class="mb-2">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-half text-warning"></i>
+                                <small class="text-muted ms-1">4.8 (145)</small>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="h5 text-success">$16.99</span>
+                            </div>
+                            <button class="btn btn-primary mt-auto">
+                                <i class="bi bi-cart me-1"></i>Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card h-100">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top product-image" alt="Plant Nutrients">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Plant Nutrients</h5>
+                            <div class="mb-2">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-half text-warning"></i>
+                                <small class="text-muted ms-1">4.7 (98)</small>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="h5 text-success">$21.99</span>
+                            </div>
+                            <button class="btn btn-primary mt-auto">
+                                <i class="bi bi-cart me-1"></i>Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-success btn-lg">View All Products</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-4 fw-bold mb-4">What Our Customers Say</h2>
+                    <p class="lead text-muted">Join thousands of satisfied customers who trust GreenCare for their gardening needs.</p>
+                </div>
+            </div>
+            
+            <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="testimonial-item">
+                                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b302?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="testimonial-avatar d-block" alt="Sarah Johnson">
+                                    <blockquote class="blockquote">
+                                        <p class="lead">"GreenCare's organic fertilizers transformed my garden completely! My vegetables are healthier and more vibrant than ever before."</p>
+                                    </blockquote>
+                                    <figcaption class="blockquote-footer mt-3">
+                                        <strong>Sarah Johnson</strong> <cite title="Source Title">Home Gardener</cite>
+                                    </figcaption>
+                                    <div class="mt-2">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="testimonial-item">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="testimonial-avatar d-block" alt="Mike Chen">
+                                    <blockquote class="blockquote">
+                                        <p class="lead">"The pest control solutions are amazing! Safe for my family and pets, yet incredibly effective against garden pests."</p>
+                                    </blockquote>
+                                    <figcaption class="blockquote-footer mt-3">
+                                        <strong>Mike Chen</strong> <cite title="Source Title">Urban Farmer</cite>
+                                    </figcaption>
+                                    <div class="mt-2">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="testimonial-item">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="testimonial-avatar d-block" alt="Emma Wilson">
+                                    <blockquote class="blockquote">
+                                        <p class="lead">"Excellent customer service and high-quality products. The gardening tips newsletter is incredibly helpful!"</p>
+                                    </blockquote>
+                                    <figcaption class="blockquote-footer mt-3">
+                                        <strong>Emma Wilson</strong> <cite title="Source Title">Garden Enthusiast</cite>
+                                    </figcaption>
+                                    <div class="mt-2">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="newsletter-section py-5 text-white">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="mb-4">
+                        <i class="bi bi-envelope fs-1"></i>
+                    </div>
+                    <h2 class="display-4 fw-bold mb-4">Join Our Growing Community</h2>
+                    <p class="lead mb-5">Get weekly gardening tips, seasonal advice, and exclusive access to new products. Join over 10,000 fellow garden enthusiasts!</p>
+                    
+                    <form class="row g-3 justify-content-center">
+                        <div class="col-auto">
+                            <input type="email" class="form-control form-control-lg" placeholder="Enter your email address" required style="width: 300px;">
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary btn-lg">Subscribe</button>
+                        </div>
+                    </form>
+                    
+                    <p class="small mt-3 text-white-50">No spam, ever. Unsubscribe at any time.</p>
+                    
+                    <div class="row mt-5">
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <i class="bi bi-flower1 fs-3 mb-3"></i>
+                                <h6 class="fw-bold">Weekly Tips</h6>
+                                <small class="text-white-50">Expert gardening advice</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <i class="bi bi-gift fs-3 mb-3"></i>
+                                <h6 class="fw-bold">Exclusive Offers</h6>
+                                <small class="text-white-50">Special discounts & deals</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <i class="bi bi-calendar-check fs-3 mb-3"></i>
+                                <h6 class="fw-bold">Seasonal Guides</h6>
+                                <small class="text-white-50">Year-round growing success</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="p-2">
+                            <img src="assets/img/flower.png" alt="" width="30" height="30" />
+                        </div>
+                        <h5 class="mb-0 text-white">GreenCare</h5>
+                    </div>
+                    <p class="text-white-50 mb-4">Your trusted partner for sustainable gardening and eco-friendly pest control solutions.</p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="social-icon">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none active">Home</a></li>
+                        <li><a href="about.html" class="text-white-50 text-decoration-none">About</a></li>
+                        <li><a href="#products" class="text-white-50 text-decoration-none">Products</a></li>
+                        <li><a href="#services" class="text-white-50 text-decoration-none">Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3">Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Garden Design</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Pest Control</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Consultation</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Maintenance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Help Center</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Returns</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Shipping</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Terms of Service</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Cookie Policy</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="border-white-50 my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-white-50 mb-0">&copy; 2024 GreenCare. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-white-50 mb-0">Made with <i class="bi bi-heart-fill text-danger"></i> for gardeners</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JavaScript -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

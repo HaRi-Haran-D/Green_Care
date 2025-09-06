@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About GreenCare - Sustainable Gardening & Pest Control Experts</title>
+    <link rel="icon" href="assets/img/flower.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --primary-green: #2d5a27;
+            --accent-color: #8bc34a;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-green) !important;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: #000;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-green);
+            border-color: var(--primary-green);
+            color: white;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary-green);
+            color: white;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="p-2">
+                    <img src="assets/img/flower.png" alt="GreenCare Logo" width="30" height="30">
+                </div>
+                GreenCare
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-success btn-sm">
+                        <i class="bi bi-person me-1"></i>Login
+                    </button>
+                    <button class="btn btn-primary btn-sm">Sign Up</button>
+                    <button class="btn btn-outline-success btn-sm">
+                        <i class="bi bi-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-4 fw-bold mb-4">About GreenCare</h2>
+                    <p class="lead text-muted mb-4">
+                        At GreenCare, we are dedicated to empowering gardeners and eco-conscious individuals with sustainable, practical, and effective solutions for gardening and pest control. Our mission is to promote green practices that foster healthier environments and more vibrant gardens.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4 text-center mt-5">
+                <div class="col-md-4">
+                    <i class="bi bi-globe fs-1 text-success mb-3"></i>
+                    <h5 class="fw-bold">Sustainability First</h5>
+                    <p>We prioritize eco-friendly practices, offering organic products and methods that reduce environmental impact.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <i class="bi bi-people fs-1 text-success mb-3"></i>
+                    <h5 class="fw-bold">Expert Support</h5>
+                    <p>Our team consists of certified horticulturists and pest control specialists dedicated to helping you succeed in your gardening journey.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <i class="bi bi-star fs-1 text-success mb-3"></i>
+                    <h5 class="fw-bold">Trusted Products</h5>
+                    <p>We offer a curated selection of premium, high-quality products that deliver reliable results and promote long-term garden health.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="index.html#contact" class="btn btn-primary btn-lg">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="p-2">
+                            <img src="assets/img/flower.png" alt="" width="30" height="30" />
+                        </div>
+                        <h5 class="mb-0 text-white">GreenCare</h5>
+                    </div>
+                    <p class="text-white-50 mb-4">Your trusted partner for sustainable gardening and eco-friendly pest control solutions.</p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="social-icon">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">About</a></li>
+                        <li><a href="#products" class="text-white-50 text-decoration-none">Products</a></li>
+                        <li><a href="#services" class="text-white-50 text-decoration-none">Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3">Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Garden Design</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Pest Control</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Consultation</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Maintenance</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Help Center</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Returns</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Shipping</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Terms of Service</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Cookie Policy</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-white-50 my-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-white-50 mb-0">&copy; 2024 GreenCare. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-white-50 mb-0">Made with <i class="bi bi-heart-fill text-danger"></i> for gardeners</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
