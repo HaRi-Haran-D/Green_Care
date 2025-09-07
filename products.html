@@ -3,53 +3,467 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Products-GreenCare</title>
+    <link rel="icon" href="assets/img/flower.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-green: #2d5a27;
+            --secondary-green: #4a7c59;
+            --accent-color: #8bc34a;
+            --earth-brown: #8d6e63;
+            --light-green: #f1f8e9;
+        }
+        .container-fluid {
+            background-color: #f1f8e9;
+        }
+        
+        .card-text {
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: #000;
+            font-weight: 600;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-green);
+            border-color: var(--primary-green);
+            color: white;
+        }
+        
+        .btn-outline-light:hover {
+            background-color: white;
+            color: var(--primary-green);
+        }
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            height: 100%;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(45, 90, 39, 0.15);
+        }
+    </style>
 </head>
 <body>
-    <section>
+
+    <!-- header navigation -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <div class="p-2">
+                    <img src="assets/img/flower.png" alt="" width="30" height="30   ">
+                </div>
+                GreenCare
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">   
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex gap-2">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-success btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person me-1"></i>Login
+                        </button>
+
+                        <div class="dropdown-menu">
+                            <form class="px-4 py-3">
+                            <div class="mb-3">
+                                <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                                    <label class="form-check-label" for="dropdownCheck">Remember me</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Sign in</button>
+                            </form>
+                            <a class="dropdown-item" href="register.html">Don't have an account? <span class="text-primary">Register</span></a>
+                            <a class="dropdown-item text-primary" href="#">Forgot password?</a>
+                        </div>
+                    </div>
+
+                    <a class="btn btn-primary btn-sm" href="register.html">Register</a>
+                    <button class="btn btn-outline-success btn-sm">
+                        <i class="bi bi-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- indoor plant -->
+
+    <section class="container-fluid">
+        <h3 class="pt-2">Indoor Plants</h3>
+    <!-- Row 1 -->
         <div class="row mt-3">
-            <div class="col-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">View all Products</a>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/indoor/photo1.jpg" class="card-img-top" alt="indoor plant">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Homalomena Plants</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
                     </div>
                 </div>
             </div>
-            <div class="col-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">View all Products</a>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/indoor/photo2.jpg" class="card-img-top" alt="indoor plant">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Areca Palm</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
                     </div>
                 </div>
             </div>
-            <div class="col-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">View all Products</a>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/indoor/photo3.jpg" class="card-img-top" alt="indoor plant">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Philodendron plants</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
                     </div>
                 </div>
             </div>
-            <div class="col-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">View all Products</a>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/indoor/photo4.jpg" class="card-img-top" alt="indoor plant">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Pachira Plants</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/indoor/photo5.jpg" class="card-img-top" alt="indoor plant">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Money plants</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/indoor/photo6.jpg" class="card-img-top" alt="indoor plant">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Asplenium Nidus</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Row 2 -->
+        <div class="row mt-3">
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/indoor/photo7.jpg" class="card-img-top" alt="indoor plant">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Anthurium Red</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/indoor/photo8.jpg" class="card-img-top" alt="indoor plant">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Spathiphyllum</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/indoor/photo9.jpg" class="card-img-top" alt="indoor plant"  height="171">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Sedum Golden</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/indoor/photo10.jpg" class="card-img-top" alt="indoor plant" height="171">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Echeveria Secunda</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- flower plant -->
+
+    <section class="container-fluid">
+        <h3 class="pt-2">Flower Plants</h3>
+    <!-- Row 1 -->
+        <div class="row mt-3">
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/flower_plant/flow1.jpg" class="card-img-top" alt="indoor plant">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Shewanti</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/flower_plant/flow2.jpg" class="card-img-top" alt="indoor plant">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Shewanti</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/flower_plant/flow3.jpg" class="card-img-top" alt="indoor plant" height="171">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Bougainvillea</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/flower_plant/flow4.jpg" class="card-img-top" alt="indoor plant">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Guzmania</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/flower_plant/flow5.jpg" class="card-img-top" alt="indoor plant">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Calla Lily</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/flower_plant/flow6.jpg" class="card-img-top" alt="indoor plant">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Ixora</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Row 2 -->
+        <div class="row mt-3">
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/flower_plant/flow7.jpg" class="card-img-top" alt="indoor plant">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Vanda Orchids</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card b-1">
+                    <img src="assets/flower_plant/flow8.jpg" class="card-img-top" alt="indoor plant">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Adenium</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- outdoor plants -->
+    
+    <section class="container-fluid">
+        <h3 class="pt-2">Outdoor Plants</h3>
+    <!-- Row 1 -->
+        <div class="row mt-3">
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/outdoor/img1.webp" class="card-img-top" alt="outdoor plant" height="171">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">coral jasmine</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/outdoor/img2.webp" class="card-img-top" alt="outdoor plant">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Curry leaves</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/outdoor/img3.webp" class="card-img-top" alt="outdoor plant" height="171">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Basil</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/outdoor/img4.webp" class="card-img-top" alt="outdoor plant" height="171">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Marigold</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/outdoor/img5.webp" class="card-img-top" alt="outdoor plant" height="171">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Nerium</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/outdoor/img6.webp" class="card-img-top" alt="outdoor plant" height="171">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Bleeding Heart</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Row 2 -->
+        <div class="row mt-3">
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card">
+                    <img src="assets/outdoor/img7.webp" class="card-img-top" alt="outdoor plant" height="171">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Thuja Plant</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card b-1">
+                    <img src="assets/outdoor/img8.webp" class="card-img-top" alt="outdoor plant" height="171">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Kalanchoe</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card text-center p-2 pb-0 feature-card b-1">
+                    <img src="assets/outdoor/img9.webp" class="card-img-top" alt="outdoor plant">
+                    <div class="card-body  p-0 pb-2">
+                        <p class="card-text">Hibiscus</p>
+                        <span class="mx-auto">
+                            <a href="#" class="btn btn-primary">View More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
 </html>
