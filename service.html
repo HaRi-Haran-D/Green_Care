@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service | GreenCare</title>
+    <link rel="icon" href="assets/img/flower.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --primary-green: #2d5a27;
+            --accent-color: #8bc34a;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-green) !important;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: #000;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-green);
+            border-color: var(--primary-green);
+            color: white;
+        }
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            height: 100%;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(45, 90, 39, 0.15);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary-green);
+            color: white;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="p-2">
+                    <img src="assets/img/flower.png" alt="GreenCare Logo" width="30" height="30">
+                </div>
+                GreenCare
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+
+                <div class="d-flex gap-2">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-success btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person me-1"></i>Login
+                        </button>
+
+                        <div class="dropdown-menu">
+                            <form class="px-4 py-3">
+                            <div class="mb-3">
+                                <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                                    <label class="form-check-label" for="dropdownCheck">Remember me</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Sign in</button>
+                            </form>
+                            <a class="dropdown-item" href="register.html">Don't have an account? <span class="text-primary">Register</span></a>
+                            <a class="dropdown-item text-primary" href="#">Forgot password?</a>
+                        </div>
+                    </div>
+
+                    <a class="btn btn-primary btn-sm" href="register.html">Register</a>
+                    <button class="btn btn-outline-success btn-sm">
+                        <i class="bi bi-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Green Garden -->
+    <section id="explore" class="py-3">
+        <div class="container pt-5 pb-3">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-4 fw-bold mb-4">How to Transform Your Garden</h2>
+                    <p class="lead text-muted mb-4">
+                        Unlock a wealth of expert gardening advice tailored to help you nurture your green space. From seasonal planting guides and pest control strategies to soil improvement techniques, our comprehensive tips empower you to cultivate a flourishing garden effortlessly.
+                    </p>
+                    <p class="lead text-muted">
+                        Discover the full range of our expert gardening solutions designed to transform any outdoor space into a vibrant oasis. Learn about our premium tools, personalized garden designs, and professional services that help you create a sustainable and beautiful garden, no matter your experience level.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="explore_more">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-8 col-sm-12 justify-content-center">
+                    <div class="card feature-card h-100 text-center p-2">
+                        <div class="feature-icon bg-light text-success">
+                            <i class="bi bi-flower1"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Garden Design & Landscaping Services</h5>
+                        <p class="text-muted mb-2"><b>1.</b> Customized garden designs for rooftops, balconies, patios, or small urban spaces.</p>
+                        <p class="text-muted mb-2"><b>2.</b> Layout planning, plant selection, and visual mockups.</p>
+                        <p class="text-muted mb-3"><b>3.</b> Eco-friendly landscaping with native and climate-suitable plants.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-8 col-sm-12">
+                    <div class="card feature-card h-100 text-center p-2">
+                        <div class="feature-icon bg-light text-success">
+                            <i class="bi bi-flower1"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Vertical & Container Gardening Solutions</h5>
+                        <p class="text-muted mb-3"><b>1.</b> Design and installation of vertical gardens (wall-mounted, frame-based).</p>
+                        <p class="text-muted mb-3"><b>2.</b> Container gardening setup for limited spaces.</p>
+                        <p class="text-muted mb-3"><b>3.</b> Advice on plant combinations for small spaces.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-8 col-sm-12">
+                    <div class="card feature-card h-100 text-center p-2">
+                        <div class="feature-icon bg-light text-success">
+                            <i class="bi bi-flower1"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Plant Installation & Maintenance</h5>
+                        <p class="text-muted mb-3"><b>1.</b> Delivery and installation of plants suitable for urban environments.</p>
+                        <p class="text-muted mb-3"><b>2.</b> Regular plant maintenance packages (watering, pruning, fertilizing).</p>
+                        <p class="text-muted mb-3"><b>3.</b> Seasonal plant replacements and advice on best plant choices for the Chennai climate.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- pest controls -->
+
+    <section id="protection" class="py-3">
+        <div class="container pt-5 pb-3">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-4 fw-bold mb-4">Protect Your Plants</h2>
+                    <p class="lead text-muted mb-4">
+                    Discover safe and eco-friendly pest control techniques that effectively safeguard your plants without harming the environment or your family. Learn about natural remedies, integrated pest management strategies, and preventive measures to keep your garden healthy and thriving all year round.
+                    </p>
+                    <p class="lead text-muted mb-4">
+                    Explore our comprehensive pest control solutions designed for every type of garden. From organic sprays to biological pest deterrents, find out how you can protect your plants while promoting sustainability and ensuring the safety of your loved ones.    
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="protection_more">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-8 col-sm-12">
+                    <div class="card feature-card h-100 text-center p-2">
+                        <div class="feature-icon bg-light text-warning">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Effective Pest Control for Healthy Home Gardens</h5>
+                        <p class="text-muted mb-3"><b>1.</b> Use of natural pest repellents and organic treatments.</p>
+                        <p class="text-muted mb-3"><b>2.</b> Focused control for common garden pests like aphids, mites, and fungi.</p>
+                        <p class="text-muted mb-3"><b>3.</b> No harmful chemicals, just sustainable, safe practices.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-8 col-sm-12">
+                    <div class="card feature-card h-100 text-center p-2">
+                        <div class="feature-icon bg-light text-warning">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Protect Your Garden from Pests the Natural Way</h5>
+                        <p class="text-muted mb-3"><b>1.</b> Chemical-free sprays and natural remedies for safe pest control.</p>
+                        <p class="text-muted mb-3"><b>2.</b> Personalized pest prevention strategies based on your garden’s size and plants.</p>
+                        <p class="text-muted mb-3"><b>3.</b> Keeps your plants healthy while protecting your family and the environment.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-8 col-sm-12">
+                    <div class="card feature-card h-100 text-center p-2">
+                        <div class="feature-icon bg-light text-warning">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Protect Your Plants from Harmful Pests Safely</h5>
+                        <p class="text-muted mb-3"><b>1.</b> Environmentally responsible pest control solutions that don’t compromise health.</p>
+                        <p class="text-muted mb-3"><b>2.</b> Target aphids, whiteflies, scale insects, and more with precision.</p>
+                        <p class="text-muted mb-3"><b>3.</b> Maintain a healthy ecosystem with ongoing preventive treatments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="eco" class="py-3">
+        <div class="container pt-5 pb-3">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-4 fw-bold mb-4">Sustainable Growing</h2>
+                    <p class="lead text-muted mb-4">
+                    Adopt sustainable gardening practices that nurture your plants while protecting the planet. Explore our range of organic products, composting techniques, and water-saving methods that help you cultivate healthy crops and a thriving garden without harming the environment.
+                    </p>
+                    <p class="lead text-muted mb-4">
+                    Delve into our eco-friendly farming solutions designed for every gardener—from urban balcony growers to backyard farmers. Learn how simple changes in your gardening approach can significantly reduce chemical use, enhance soil health, and promote biodiversity, contributing to a greener future.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="eco_more">
+        <div class="container pb-5">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-8 col-sm-12">
+                    <div class="card feature-card h-100 text-center p-2">
+                        <div class="feature-icon bg-light text-success">
+                            <i class="bi bi-recycle"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Organic Vegetable & Herb Garden</h5>
+                        <p class="text-muted mb-3"><b>1.</b> Design and install home vegetable and herb gardens using natural, chemical-free soil.</p>
+                        <p class="text-muted mb-3"><b>2.</b> Provide customized solutions for small spaces like balconies, rooftops, and backyards.</p>
+                        <p class="text-muted mb-3"><b>3.</b> Ensure regular maintenance and expert guidance for year-round sustainable growth.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-8 col-sm-12">
+                    <div class="card feature-card h-100 text-center p-2">
+                        <div class="feature-icon bg-light text-success">
+                            <i class="bi bi-recycle"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Soil Health Testing & Improvement</h5>
+                        <p class="text-muted mb-3"><b>1.</b> Analyze soil for nutrient levels, pH, and structure to detect deficiencies.</p>
+                        <p class="text-muted mb-3"><b>2.</b> Offer eco-friendly solutions like organic compost and natural fertilizers.</p>
+                        <p class="text-muted mb-3"><b>3.</b> Improve soil health long-term while avoiding harmful chemicals.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-8 col-sm-12">
+                    <div class="card feature-card h-100 text-center p-2">
+                        <div class="feature-icon bg-light text-success">
+                            <i class="bi bi-recycle"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Sustainable Irrigation Consultation</h5>
+                        <p class="text-muted mb-3"><b>1.</b> Implement smart irrigation methods such as drip irrigation and rainwater harvesting.</p>
+                        <p class="text-muted mb-3"><b>2.</b> Provide advice on efficient watering schedules to reduce waste.</p>
+                        <p class="text-muted mb-3"><b>3.</b> Promote sustainable water use while keeping plants healthy and hydrated.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+
+    <!-- Footer Section -->
+    <footer id="contact" class="footer py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="p-2">
+                            <img src="assets/img/flower.png" alt="" width="30" height="30" />
+                        </div>
+                        <h5 class="mb-0 text-white">GreenCare</h5>
+                    </div>
+                    <p class="text-white-50 mb-4">Your trusted partner for sustainable gardening and eco-friendly pest control solutions.</p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="social-icon">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">About</a></li>
+                        <li><a href="#products" class="text-white-50 text-decoration-none">Products</a></li>
+                        <li><a href="#services" class="text-white-50 text-decoration-none">Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3">Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Garden Design</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Pest Control</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Consultation</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Maintenance</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Help Center</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Returns</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Shipping</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white mb-3">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Terms of Service</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Cookie Policy</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-white-50 my-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-white-50 mb-0">&copy; 2024 GreenCare. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-white-50 mb-0">Made with <i class="bi bi-heart-fill text-danger"></i> for gardeners</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
