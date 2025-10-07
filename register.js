@@ -1,15 +1,16 @@
-document.addEventListener('DOMContentLoaded', ()=> {
+//document.addEventListener('DOMContentLoaded', ()=> {
 
 const myform = document.getElementById('myform')
 
-const floatingInput = document.getElementById('floatingInput').value;
-const floatingfname = document.getElementById('floatingfname').value;
-//const floatinglname = document.getElementById('floatinglname').value;
-const floatingPassword = document.getElementById('floatingPassword').value;
+
 
 
 myform.addEventListener('submit', (e) => {
     e.preventDefault();
+    const floatingInput = document.getElementById('floatingInput').value;
+    const floatingfname = document.getElementById('floatingfname').value;
+    //const floatinglname = document.getElementById('floatinglname').value;
+    const floatingPassword = document.getElementById('floatingPassword').value;
     
     const obj = {username: floatingfname,email: floatingInput, password: floatingPassword}
 
@@ -21,4 +22,4 @@ myform.addEventListener('submit', (e) => {
     window.location.href = "index.html";
     myform.reset();
 });
-});
+//});
